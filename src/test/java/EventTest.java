@@ -16,8 +16,8 @@ public class EventTest {
 
     @Test
     public void canSetAndGetId() {
-        event.setId(55);
-        assertThat(event.id(), is(55));
+        event.setId(55L);
+        assertThat(event.getId(), is(55L));
     }
 
 }
