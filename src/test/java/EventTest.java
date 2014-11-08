@@ -20,5 +20,11 @@ public class EventTest {
         assertThat(event.getId(), is(55L));
     }
 
+    @Test
+    public void canSetAndGetTitle() {
+        event.setTitle("Title");
+        assertThat(event.getTitle(), is("Title"));
+    }
+
 }
 
