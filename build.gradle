@@ -1,0 +1,27 @@
+apply plugin: 'java'
+
+group = 'org.hibernate.tutorials'
+version = '1.0.0-SNAPSHOT'
+
+description = "First Hibernate Tutorial"
+
+repositories {
+    jcenter()
+}
+
+test {
+    testLogging {
+        exceptionFormat = 'full' //full logging for fails
+        events "passed", "skipped" //displays pasing and skipped tests
+        outputs.upToDateWhen {false} //forces tests to run each time
+    }
+}
+
+dependencies {
+    compile 'org.hibernate:hibernate-core:latest.release'
+    compile 'javax.servlet:servlet-api:latest.release'
+    compile 'org.slf4j:slf4j-simple:latest.release'
+    compile 'javassist:javassist:latest.release'
+    testCompile 'junit:junit:4.11'
+}
+
