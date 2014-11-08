@@ -8,11 +8,13 @@ public class Event {
     private String title;
     private Date date;
 
-    public Event() {}
+    public Event() {} //empty constructor for Hibernate
 
     public long getId() {
         return id;
     }
+    // setId can be private; Hibernate uses reflection to get inside the object
+    // to set the id
     public void setId(long newId) {
         id = newId;
     }
