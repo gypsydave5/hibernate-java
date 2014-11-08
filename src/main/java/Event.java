@@ -6,21 +6,29 @@ public class Event {
 
     private long id;
     private String title;
+    private Date date;
 
     public Event() {}
 
     public long getId() {
         return id;
     }
-    public void setId(long new_id) {
-        id = new_id;
+    public void setId(long newId) {
+        id = newId;
     }
 
     public String getTitle() {
         return title;
     }
-    public void setTitle(String new_title) {
-        title = new_title;
+    public void setTitle(String newTitle) {
+        title = newTitle;
+    }
+
+    public Date getDate() {
+        return date;
+    }
+    public void setDate(Date newDate) {
+        date = newDate;
     }
 
 }

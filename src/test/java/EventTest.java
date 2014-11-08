@@ -1,5 +1,8 @@
 package org.hibernate.tutorial.domain;
 
+import java.util.Calendar;
+import java.util.Date;
+
 import org.junit.Test;
 import org.junit.Before;
 import static org.junit.Assert.*;
@@ -26,5 +29,12 @@ public class EventTest {
         assertThat(event.getTitle(), is("Title"));
     }
 
+    @Test
+    public void canSetAndGetDate() {
+        Calendar timeNow = Calendar.getInstance();
+        Date today = timeNow.getTime();
+        event.setDate(today);
+        assertThat(event.getDate(), is(today));
+    }
 }
 
